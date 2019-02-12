@@ -6,16 +6,27 @@ namespace PadawansTask4
     {
         public static int GetVowelCount(string str)
         {
-            // put your code here
-            int count = 0;
-            for (int i = 0; i < str.Length; ++i)
+            if (str == null)
             {
-                if (str[i] == 'a' || str[i] == 'e' || str [i] == 'i' || str[i] == 'o' || str[i] == 'u')
-                {
-                    count++;
-                }
+                throw new ArgumentException();
             }
-            return count;
+            else if (str == "")
+            {
+                throw new ArgumentNullException();
+            }
+            else
+            {
+                // put your code here
+                int count = 0;
+                for (int i = 0; i < str.Length; ++i)
+                {
+                    if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u')
+                    {
+                        count++;
+                    }
+                }
+                return count;
+            }
         }
     }
 }
