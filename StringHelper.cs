@@ -8,11 +8,11 @@ namespace PadawansTask4
         {
             if (str == null)
             {
-                throw new ArgumentException();
+                throw new ArgumentNullException();
             }
             else if (str == "")
             {
-                throw new ArgumentNullException();
+                throw new ArgumentException();
             }
             else
             {
